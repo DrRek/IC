@@ -53,12 +53,12 @@
 	cursor: pointer;
 }
 
-#other-nav-brand ul li a, .to-right li a{
+#other-nav-brand ul li a, .to-right li a {
 	font-size: 17px;
 	color: white;
 }
 
-#other-nav-brand ul li a:hover, .to-right li a:hover{
+#other-nav-brand ul li a:hover, .to-right li a:hover {
 	background: rgb(0, 69, 166);
 }
 
@@ -88,25 +88,43 @@
 		display: block;
 	}
 }
-.just-if-small{
-	display:none;
+
+.just-if-small {
+	display: none;
 }
-.to-right{
-	right:0;
+
+.to-right {
+	opacity: 0.97;
+	right: 0;
 	position: absolute;
-	padding-left:0;
+	padding-left: 0;
 	list-style-type: none;
-	margin-bottom:0 !important;
+	margin-bottom: 0 !important;
 	background-color: #777;
-	float:right;
+	float: right;
 }
-.to-right li a{
+
+.to-right li a {
+	opacity: 1;
 	text-decoration: none;
 	padding-left: 25px;
 	padding-right: 25px;
-	padding-top: 5px;
+	padding-top: 13px;
 	height: 50px;
 	text-align: right;
 	vertical-align: middle;
 	display: block;
+}
+
+.realy-small-device {
+	display: none;
+}
+
+@media screen and (max-width: 432px) {
+	.normal-device {
+		display: none !important;
+	}
+	.realy-small-device {
+		display: block;
+	}
 }

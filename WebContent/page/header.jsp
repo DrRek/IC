@@ -21,7 +21,7 @@
 		<div id="other-nav-brand">
 			<ul class="nav navbar-nav navbar-centered">
 				<li><a href="#">Richiedi un preventivo</a>
-				<li><a href="#">Contatti</a>
+				<li class="normal-device"><a href="#">Contatti</a>
 			</ul>
 		</div>
 		<div id="drop-down"></div>
@@ -32,5 +32,6 @@
 		<li><a href="#">Modulistica</a>
 		<li><a href="#">Banche convenzionate</a>
 		<li><a href="#">Plafond e linee di credito</a>
+		<li class="realy-small-device"><a href="#">Contatti</a>
 	</ul>
 </nav>
