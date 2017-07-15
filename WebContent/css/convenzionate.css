@@ -68,3 +68,7 @@
 		background-size: auto 115px;
 	}
 }
+
+a {
+	text-decoration: none !important;
+}

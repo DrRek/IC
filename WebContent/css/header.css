@@ -37,6 +37,10 @@
 	border-radius: 0;
 }
 
+#second-navbar .container-fluid {
+	padding: 0 !important;
+}
+
 #img-nav-header {
 	margin: 0 !important;
 	height: 50px;
@@ -86,6 +90,15 @@
 @media screen and (max-width: 768px) {
 	#drop-down {
 		display: block;
+	}
+	#nome {
+		color: rgb(0, 69, 166);
+	}
+	#drop-down {
+		background-image: url("../resources/img/dropdown-ico-blue.png");
+	}
+	#img-nav-header {
+		background-image: url("../resources/img/logo.png");
 	}
 }
 
