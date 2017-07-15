@@ -1,0 +1,112 @@
+#first-navbar {
+	margin-top: 20px !important;
+	background-color: white !important;
+	border: none !important;
+	margin-bottom: 0 !important;
+}
+
+#nome {
+	font-size: 35px;
+}
+
+#frase {
+	float: right !important;
+	letter-spacing: 2px;
+}
+
+@media screen and (max-width: 660px) {
+	#frase {
+		display: none;
+	}
+}
+
+#dotit {
+	color: rgb(0, 69, 166);
+	margin-left: -8px;
+}
+
+#nome:hover {
+	color: rgb(0, 69, 166);
+	cursor: pointer;
+}
+
+#second-navbar {
+	margin-bottom: 0;
+	background-color: #777;
+	border: none;
+	border-radius: 0;
+}
+
+#img-nav-header {
+	margin: 0 !important;
+	height: 50px;
+	width: 50px;
+	background-image: url("../resources/img/logo-white.png");
+	background-size: 36px;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: block;
+}
+
+#img-nav-header:hover {
+	background-image: url("../resources/img/logo.png");
+	cursor: pointer;
+}
+
+#other-nav-brand ul li a, .to-right li a{
+	font-size: 17px;
+	color: white;
+}
+
+#other-nav-brand ul li a:hover, .to-right li a:hover{
+	background: rgb(0, 69, 166);
+}
+
+.go-down-on-fixed {
+	margin-top: 50px;
+}
+
+#drop-down {
+	margin: 0 !important;
+	float: right;
+	height: 50px;
+	width: 50px;
+	background-image: url("../resources/img/dropdown-ico-white.png");
+	background-size: 30px;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: none;
+}
+
+#drop-down:hover {
+	background-image: url("../resources/img/dropdown-ico-blue.png");
+	cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+	#drop-down {
+		display: block;
+	}
+}
+.just-if-small{
+	display:none;
+}
+.to-right{
+	right:0;
+	position: absolute;
+	padding-left:0;
+	list-style-type: none;
+	margin-bottom:0 !important;
+	background-color: #777;
+	float:right;
+}
+.to-right li a{
+	text-decoration: none;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 5px;
+	height: 50px;
+	text-align: right;
+	vertical-align: middle;
+	display: block;
+}
