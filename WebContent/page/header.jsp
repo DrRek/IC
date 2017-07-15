@@ -20,7 +20,7 @@
 		<div class="navbar-header" id="img-nav-header"></div>
 		<div id="other-nav-brand">
 			<ul class="nav navbar-nav navbar-centered">
-				<li><a href="#">Richiedi preventivo</a>
+				<li><a href="/ImpresaConfidi/page/preventivo.jsp">Richiedi preventivo</a>
 				<li class="normal-device"><a href="#">Contatti</a>
 			</ul>
 		</div>
