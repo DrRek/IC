@@ -1,0 +1,70 @@
+#textSpace {
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+	width: 70%;
+}
+
+.thumbnail {
+	display: inline-block;
+	height: 160px;
+	width: 360px;
+}
+
+.thumbnail {
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#bcp {
+	background-image: url(/ImpresaConfidi/resources/img/banche/BCP.jpg);
+	background-size: auto 150px;
+}
+
+#ubi {
+	background-image: url(/ImpresaConfidi/resources/img/banche/UBI.gif);
+	background-size: auto 100px;
+}
+
+#bper {
+	background-image: url(/ImpresaConfidi/resources/img/banche/BPER.png);
+	background-size: auto 125px;
+}
+
+#mps {
+	background-image: url(/ImpresaConfidi/resources/img/banche/MPS.jpg);
+	background-size: auto 140px;
+}
+
+#uni {
+	background-image:
+		url(/ImpresaConfidi/resources/img/banche/UNICREDIT.jpg);
+	background-size: auto 135px;
+}
+
+@media screen and (max-width: 365px) {
+	.thumbnail {
+		height: 120px;
+		width: 320px;
+	}
+	#bcp {
+		background-image: url(/ImpresaConfidi/resources/img/banche/BCP.jpg);
+		background-size: auto 120px;
+	}
+	#ubi {
+		background-image: url(/ImpresaConfidi/resources/img/banche/UBI.gif);
+		background-size: auto 90px;
+	}
+	#bper {
+		background-image: url(/ImpresaConfidi/resources/img/banche/BPER.png);
+		background-size: auto 110px;
+	}
+	#mps {
+		background-image: url(/ImpresaConfidi/resources/img/banche/MPS.jpg);
+		background-size: auto 110px;
+	}
+	#uni {
+		background-image:
+			url(/ImpresaConfidi/resources/img/banche/UNICREDIT.jpg);
+		background-size: auto 115px;
+	}
+}

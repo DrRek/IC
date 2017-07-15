@@ -6,7 +6,7 @@
 	<hr>
 	<ul class="sidenav">
 		<li><a href="#">Modulistica</a></li>
-		<li><a href="#">Banche convenzionate</a></li>
+		<li><a href="/ImpresaConfidi/page/convenzionate.jsp">Banche convenzionate</a></li>
 		<li><a href="#">Plafond e linee di credito</a></li>
 	</ul>
 	<hr>

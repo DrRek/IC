@@ -49,6 +49,6 @@ ul.sidenav{
     }
     .other-side-element{
 		margin-left: 0;
-		width: 100%;
+		width: 100% !important;
 	}
 }
