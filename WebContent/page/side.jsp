@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<link href="css/side.css" type="text/css" rel="stylesheet" />
+<link href="/ImpresaConfidi/css/side.css" type="text/css" rel="stylesheet" />
 
 <div class='sidenav'>
-	<a href=""><img class='sidenav' src="resources/img/logo.png"/></a>
+	<a href=""><img class='sidenav' src="/ImpresaConfidi/resources/img/logo.png"/></a>
 	<hr>
 	<ul class="sidenav">
 		<li><a href="#">Modulistica</a></li>

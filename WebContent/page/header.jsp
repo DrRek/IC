@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<link href="css/header.css" type="text/css" rel="stylesheet" />
-<script src="script/header.js"></script>
+<link href="/ImpresaConfidi/css/header.css" type="text/css" rel="stylesheet" />
+<script src="/ImpresaConfidi/script/header.js"></script>
 
 <nav class="navbar navbar-default" id="first-navbar">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="navbar-brand  navbar-brand-left" id="nome">
+			<a class="navbar-brand  navbar-brand-left" id="nome" href="/ImpresaConfidi/page/index.jsp">
 				ImpresaConfidi <span id="dotit">.it</span>
 			</a>
 		</div>
@@ -30,7 +30,7 @@
 <nav class="just-if-small">
 	<ul class="to-right">
 		<li><a href="#">Modulistica</a>
-		<li><a href="#">Banche convenzionate</a>
+		<li><a href="/ImpresaConfidi/page/convenzionate.jsp">Banche convenzionate</a>
 		<li><a href="#">Plafond e linee di credito</a>
 		<li class="realy-small-device"><a href="#">Contatti</a>
 	</ul>
