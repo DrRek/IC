@@ -28,27 +28,29 @@
 				<p>info da scrivere</p>
 				<div class="bordered-form">
 					<h3>Richiedi un preventivo online:</h3>
-					<form onsubmit="sendPRequest()">
 						<div class="form-group">
 							<br>
 							<label for="nome">Nome del titolare:</label>
 							<input class="form-control required string" type="text" name="nome" size="20" />
-							<span class="help-block" id="nome"></span>
-							<br>
+							<span class="help-block" id="nomeR"></span>
 						</div>
 						<div class="form-group">
 							<br>
 							<label for="cognome">Cognome del titolare:</label>
 							<input class="form-control required string" type="text" name="cognome" size="20" />
 							<span class="help-block" id="cognome"></span>
+						</div>
+						<div class="form-group">
 							<br>
+							<label for="email">Email:</label>
+							<input class="form-control required email" type="text" name="email" size="20" />
+							<span class="help-block" id="email"></span>
 						</div>
 						<div class="form-group">
 							<br>
 							<label for="telefono">N. telefono:</label>
 							<input class="form-control required stringOfNumber" type="text" name="telefono" size="13" />
 							<span class="help-block" id="telefono"></span>
-							<br>
 						</div>
 						<div class="form-group">
 							<br>
@@ -166,55 +168,48 @@
 								<option value="vt">viterbo</option>
 							</select>
 							<span class="help-block" id="provincia"></span>
-							<br>
 						</div>
 						<div class="form-group">
 							<br>
 							<label for="città">Città:</label>
 							<input class="form-control required string" type="text" name="città" size="30" />
 							<span class="help-block" id="città"></span>
-							<br>
 						</div>
 						<div class="form-group">
 							<br>
 							<label for="via">Via:</label>
-							<input class="form-control required stringwithnumber" type="text" name="via" size="50" />
+							<input class="form-control required stringWithNumber" type="text" name="via" size="50" />
 							<span class="help-block" id="via"></span>
-							<br>
 						</div>
 
 						<div class="form-group">
 							<br>
 							<label for="tipo">Tipo di prestito:</label>
-							<select class="form-control" name="tipo">
+							<select class="form-control required" name="tipo">
 								<option value="Mutuo chirografario">Mutuo chirografario</option>
 								<option value="Mutuo ipotecario">Mutuo ipotecario</option>
 								<option value="Fido di conto corrente">Fido di conto corrente</option>
 								<option value="Altro">Altro</option>
 							</select>
 							<span class="help-block"id="tipo"></span>
-							<br>
 						</div>
-						<div class="form-group">
+						<div class="form-group" id="AltroTipo">
 							<br>
-							<label for="tipoAltro">Tipo di prestito:</label>
-							<input class="form-control" name="tipoAltro" type="text"/>
+							<label for="tipoAltro">Altro tipo di prestito:</label>
+							<input class="form-control string requiredIf" name="tipoAltro" type="text"/>
 							<span class="help-block"id="tipoAltro"></span>
-							<br>
 						</div>
 						<div class="form-group">
 							<br>
 							<label for="importo">Importo:</label>
-							<input class="form-control number required" name="importo" type="number" min="0.01" step="0.01" max="50000"/>
+							<input class="form-control number required" name="importo" type="number" min="0.01" step="0.01" max="50000" placeholder="In euro"/>
 							<span class="help-block"id="importo"></span>
-							<br>
 						</div>
 						<div class="form-group">
 							<br>
 							<label for="durata">Durata:</label>
-							<input class="form-control number" name="durata" type="number" min="1" max="10"/>
+							<input class="form-control number required" name="durata" type="number" min="1" max="10" placeholder="In anni"/>
 							<span class="help-block" id="durata"></span>
-							<br>
 						</div>
 						<div class="form-group">
 							<br>
@@ -229,30 +224,28 @@
 								<option value="Altro">Altro</option>
 							</select>
 							<span class="help-block" id="durata"></span>
-							<br>
 						</div>
-						<div class="form-group">
+						<div class="form-group" id="AltraMotivazione">
 							<br>
 							<label for="motivazioneAltro">Altra motivazione:</label>
-							<input class="form-control" name="motivazioneAltro" type="text"/>
+							<input class="form-control requiredIf" name="motivazioneAltro" type="text"/>
 							<span class="help-block"id="motivazioneAltro"></span>
-							<br>
 						</div>
 						
 						<div class="form-group">
 							<br>
 							<label for="messaggio">Messaggio:</label>
-							<textarea class="form-control stringwithnumber" rows="5" name="messaggio"></textarea>
+							<textarea class="form-control stringwithnumber" rows="5" name="messaggio" placeholder="Aggiungere qualsiasi richiesta specifica o domanda."></textarea>
 							<span class="help-block" id="messaggio"></span>
-							<br>
 						</div>
 						<div style="text-align: center;">
-							<input class= "btn btn-outline-secondary" name="submit" value="Invia!" type="submit" >
+							<input class= "btn btn-outline-secondary" name="submit" value="Invia!" type="button" onclick="sendPRequest()">
 						</div>
-					</form>
 				</div>
 				<br>
 			</div>
 		</div>
 	</div>
+	
+	<script src="/ImpresaConfidi/script/preventivo.js"></script>
 </body>
