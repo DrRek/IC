@@ -23,11 +23,28 @@ $(document).ready(function() {
 			$("#AltraMotivazione").hide();
 		}
 	});
+	
+	/*Controlla che l'importo e la durata non superino il massimo in base al tipo di prestito*/
 	$("input[name=importo]").on("change", function(){
 		validateImport();
 	});
 	$("input[name=durata]").on("change", function(){
 		validateDurata();
+	});
+	
+	/*Aggiunge spazi per inserire conti correnti aperti*/
+	$("input[name=add]").on("click", function(){
+		$("div.notStartup").append('<div class="singleCC"><div style="width:40%;display:inline-block;"><label for="banca">Banca:</label><input class="form-control string" name="banca" list="suggestedBank" type="text"><span class="help-block" id="banca"></span></div><div style="width:40%;display:inline-block;"><label for="filiale">Filiale:</label><input class="form-control string" name="filiale" type="text"><span class="help-block"id="filiale"></span></div><input class= "btn btn-outline-secondary" name="delete" value="X" type="button" style="width:8%;display:inline-block;color:red;font-weight: bold;"></div>');
+	});
+	
+	/*Rimuove uno spazio per un conto corrente*/
+	$(document.body).on('click', 'input[name=delete]' ,function(){
+		alert("test")
+		$(this).closest("div.singleCC").remove();
+	});
+
+	$(document.body).on('click', 'input[name=tipoAzienda]' ,function(){
+		$(".notStartup").toggle();
 	});
 });
 

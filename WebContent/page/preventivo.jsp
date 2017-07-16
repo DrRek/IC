@@ -187,9 +187,41 @@
 						<h4>Informazioni sull'azienda</h4>
 						<div class="form-group">
 							<label for="tipo">Seleziona se l'azienda ha meno di 3 anni:</label><br>
-							<input type="checkbox" name="tipoAzienda">Startup
+							<input type="checkbox" name="tipoAzienda"> Startup
 							<span class="help-block"id="tipo"></span>
 						</div>
+						<div class="form-group">
+							<label for="ragSociale">Ragione sociale:</label>
+							<select class="form-control required" name="ragSociale">
+								<option value="S.S.">S.S.</option>
+								<option value="S.n.c.">S.n.c.</option>
+								<option value="S.a.s.">S.a.s.</option>
+								<option value="S.r.l.">S.r.l.</option>
+								<option value="S.r.l.s.">S.r.l.s.</option>
+								<option value="S.r.l.u.">S.r.l.u.</option>
+								<option value="S.p.a.">S.p.a</option>
+								<option value="S.a.p.a.">S.a.p.a</option>
+							</select>
+							<span class="help-block" id="ragSociale"></span>
+						</div>
+						<div class="notStartup sotto-sezione">
+							<h4>Inserisci i dati dei conti correnti già aperti:</h4>
+							<div class="singleCC"> <!-- Se modifichi questa parte bisogna cambiare anche il js -->
+								<div style="width:40%;display:inline-block;">
+									<label for="banca">Banca:</label>
+									<input class="form-control string" name="banca" list="suggestedBank" type="text">
+									<span class="help-block" id="banca"></span>
+								</div>
+								<div style="width:40%;display:inline-block;">
+									<label for="filiale">Filiale:</label>
+									<input class="form-control string" name="filiale" type="text">
+									<span class="help-block"id="filiale"></span>
+								</div>
+								<input class= "btn btn-outline-secondary" name="delete" value="X" type="button" style="width:8%;display:inline-block;color:red;font-weight: bold;">
+							</div>
+						</div>
+						<input class= "btn btn-outline-secondary notStartup" name="add" value="Aggiungi conto!" type="button">
+						<%@ include file="/page/banche.jsp"%>
 					</div>
 					<div class="sotto-sezione">
 						<h4>Informazioni sul prestito da richiedere</h4>
