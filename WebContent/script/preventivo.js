@@ -1,12 +1,12 @@
 $(document).ready(function() {
 	$(".required").each(function(){
 		var lab = $(this).siblings("label")
-		lab.html("<span title='Il campo deve essere riempito'><span style='color:red;'>* </span>"+lab.html()+"</span>");
-	})
+		lab.html("<span title='Il campo deve essere riempito'>"+lab.html()+"<span style='color:red;'> *</span></span>");
+	});
 	$(".requiredIf").each(function(){
 		var lab = $(this).siblings("label")
 		lab.html("<span title='Il campo deve essere riempito'><span style='color:red;'>* </span>"+lab.html()+"</span>");
-	})
+	});
 	$("#AltroTipo").hide();
 	$("select[name=tipo]").on("change", function(){
 		if($("select[name=tipo]").val()=="Altro"){
@@ -14,7 +14,7 @@ $(document).ready(function() {
 		}else{
 			$("#AltroTipo").hide();
 		}
-	})
+	});
 	$("#AltraMotivazione").hide();
 	$("select[name=motivazione]").on("change", function(){
 		if($("select[name=motivazione]").val()=="Altro"){
@@ -22,8 +22,54 @@ $(document).ready(function() {
 		}else{
 			$("#AltraMotivazione").hide();
 		}
-	})
+	});
+	$("input[name=importo]").on("change", function(){
+		validateImport();
+	});
+	$("input[name=durata]").on("change", function(){
+		validateDurata();
+	});
 });
+
+function validateImport(){
+	$("input[name=importo]").siblings("span").html("");
+	if($("input[name=importo]").val()!=undefined && $("input[name=importo]").val()!=null && $("input[name=importo]").val()!=0){
+		if($("select[name=tipo]").val()=="Mutuo chirografario" && $("input[name=importo]").val()>50000){
+			sendError($("input[name=importo]"), "Il massimo importo per il mutuo chirografario è di 50'000€.");
+			return false;
+		}else if($("select[name=tipo]").val()=="Mutuo ipotecario" && $("input[name=importo]").val()>300000){
+			sendError($("input[name=importo]"), "Il massimo importo per il mutuo ipotecario è di 300'000€.");
+			return false;
+		}else if($("select[name=tipo]").val()=="Fido di conto corrente" && $("input[name=importo]").val()>10000){
+			sendError($("input[name=importo]"), "Il massimo importo per il mutuo ipotecario è di 10'000€.");
+			return false;
+		}else if($("input[name=importo]").val()>300000){
+			sendError($("input[name=importo]"), "Il massimo importo è di 300'000€.");
+			return false;
+		}
+	}
+	return true;
+}
+
+function validateDurata(){
+	$("input[name=durata]").siblings("span").html("");
+	if($("input[name=durata]").val()!=undefined && $("input[name=durata]").val()!=null && $("input[name=durata]").val()!=0){
+		if($("select[name=tipo]").val()=="Mutuo chirografario" && $("input[name=durata]").val()>5){
+			sendError($("input[name=durata]"), "La massima durata di un mutuo chirografario è di 5 anni.");
+			return false;
+		}else if($("select[name=tipo]").val()=="Mutuo ipotecario" && $("input[name=durata]").val()>10){
+			sendError($("input[name=durata]"), "La massima durata di un mutuo ipotecario è di 10 anni.");
+			return false;
+		}else if($("select[name=tipo]").val()=="Fido di conto corrente" && $("input[name=durata]").val()>1){
+			sendError($("input[name=durata]"), "Il fido di conto corrente dura massimo un anno ed è rinnovabile");
+			return false;
+		}else if($("input[name=durata]").val()>10){
+			sendError($("input[name=durata]"), "La massima durata è di 10 anni.");
+			return false;
+		}
+	}
+	return true;
+}
 
 function sendPRequest(){
 	if(checkField()){
@@ -50,9 +96,8 @@ function sendPRequest(){
 function checkField(){
 	$("span.help-block").html("");
 	var end = false;
-	
+
 	if($("select[name=tipo]").val()=="Altro"){
-		alert("ok")
 		$("input[name=tipoAltro]").addClass("required");
 		$("input[name=tipoAltro]").addClass("string");
 	}else{
@@ -66,7 +111,7 @@ function checkField(){
 		$("input[name=motivazioneAltro]").removeClass("required");
 		$("input[name=motivazioneAltro]").removeClass("string");
 	}
-	
+
 	$(".required").each(function(){
 		if( $(this).val()==undefined || $(this).val()==null || $(this).val()=="" ){
 			sendError(this, "Il campo non può essere lasciato vuoto.");
@@ -109,8 +154,7 @@ function checkField(){
 		}
 	})
 	if(end) return false;
-	
-	return true;
+	return validateDurata() && validateImport();
 }
 
 function sendError(obj, mex){

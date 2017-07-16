@@ -28,15 +28,16 @@
 				<p>info da scrivere</p>
 				<div class="bordered-form">
 					<h3>Richiedi un preventivo online:</h3>
+					<div class="sotto-sezione">
+						<h4>Informazioni sul titolare</h4>
 						<div class="form-group">
-							<br>
-							<label for="nome">Nome del titolare:</label>
+							<label for="nome">Nome:</label>
 							<input class="form-control required string" type="text" name="nome" size="20" />
 							<span class="help-block" id="nomeR"></span>
 						</div>
 						<div class="form-group">
 							<br>
-							<label for="cognome">Cognome del titolare:</label>
+							<label for="cognome">Cognome:</label>
 							<input class="form-control required string" type="text" name="cognome" size="20" />
 							<span class="help-block" id="cognome"></span>
 						</div>
@@ -181,9 +182,18 @@
 							<input class="form-control required stringWithNumber" type="text" name="via" size="50" />
 							<span class="help-block" id="via"></span>
 						</div>
-
+					</div>
+					<div class="sotto-sezione">
+						<h4>Informazioni sull'azienda</h4>
 						<div class="form-group">
-							<br>
+							<label for="tipo">Seleziona se l'azienda ha meno di 3 anni:</label><br>
+							<input type="checkbox" name="tipoAzienda">Startup
+							<span class="help-block"id="tipo"></span>
+						</div>
+					</div>
+					<div class="sotto-sezione">
+						<h4>Informazioni sul prestito da richiedere</h4>
+						<div class="form-group">
 							<label for="tipo">Tipo di prestito:</label>
 							<select class="form-control required" name="tipo">
 								<option value="Mutuo chirografario">Mutuo chirografario</option>
@@ -231,16 +241,16 @@
 							<input class="form-control requiredIf" name="motivazioneAltro" type="text"/>
 							<span class="help-block"id="motivazioneAltro"></span>
 						</div>
-						
-						<div class="form-group">
-							<br>
-							<label for="messaggio">Messaggio:</label>
-							<textarea class="form-control stringwithnumber" rows="5" name="messaggio" placeholder="Aggiungere qualsiasi richiesta specifica o domanda."></textarea>
-							<span class="help-block" id="messaggio"></span>
-						</div>
-						<div style="text-align: center;">
-							<input class= "btn btn-outline-secondary" name="submit" value="Invia!" type="button" onclick="sendPRequest()">
-						</div>
+					</div>
+					<div class="form-group">
+						<br>
+						<label for="messaggio">Messaggio:</label>
+						<textarea class="form-control stringwithnumber" rows="5" name="messaggio" placeholder="Aggiungere qualsiasi richiesta specifica o domanda."></textarea>
+						<span class="help-block" id="messaggio"></span>
+					</div>
+					<div style="text-align: center;">
+						<input class= "btn btn-outline-secondary" name="submit" value="Invia!" type="button" onclick="sendPRequest()">
+					</div>
 				</div>
 				<br>
 			</div>
