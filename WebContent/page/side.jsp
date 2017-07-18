@@ -5,7 +5,7 @@
 	<a href=""><img class='sidenav' src="/ImpresaConfidi/resources/img/logo.png"/></a>
 	<hr>
 	<ul class="sidenav">
-		<li><a href="#">Modulistica</a></li>
+		<li><a href="/ImpresaConfidi/page/modulistica.jsp">Modulistica</a></li>
 		<li><a href="/ImpresaConfidi/page/convenzionate.jsp">Banche convenzionate</a></li>
 		<li><a href="#">Plafond e linee di credito</a></li>
 	</ul>
