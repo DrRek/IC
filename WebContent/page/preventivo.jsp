@@ -288,6 +288,7 @@
 			</div>
 		</div>
 	</div>
+	<%@ include file="/page/footer.jsp" %>
 	
 	<script src="/ImpresaConfidi/script/preventivo.js"></script>
 </body>

@@ -10,7 +10,6 @@
 <link href="/ImpresaConfidi/css/bootstrap.css" type="text/css" rel="stylesheet"
 	media="screen,projection" />
 <link href="/ImpresaConfidi/css/general.css" type="text/css" rel="stylesheet" />
-<link href="/ImpresaConfidi/css/index.css" type="text/css" rel="stylesheet" />
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
@@ -22,6 +21,7 @@
 				<%@ include file="/page/side.jsp"%>
 			</div>
 			<div class="other-side-element" id="textSpace">
+				<h1>Plafond e linee di credito</h1>
 				<h2>Chi siamo</h2>
 				<p>Roba da inserire</p>
 				<h2>Reti di confidi</h2>

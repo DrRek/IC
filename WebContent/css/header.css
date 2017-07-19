@@ -43,9 +43,9 @@
 }
 
 #img-nav-header {
-	margin: 0 !important;
-	height: 50px;
-	width: 50px;
+	margin-left:7px;
+	height: 53px;
+	width: 53px;
 	background-image: url("../resources/img/logo-white.png");
 	background-size: 36px;
 	background-position: center;
@@ -61,6 +61,11 @@
 #other-nav-brand ul li a, .to-right li a {
 	font-size: 17px;
 	color: white;
+}
+
+#img-nav-header, #other-nav-brand ul li {
+	height:50px;
+	margin-right:7px;
 }
 
 #other-nav-brand ul li a:hover, .to-right li a:hover {

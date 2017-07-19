@@ -17,11 +17,11 @@
 </nav>
 <nav class="navbar navbar-default" id="second-navbar">
 	<div class="container-fluid">
-		<div class="navbar-header" id="img-nav-header"></div>
+		<div class="navbar-header" ><a id="img-nav-header" href="/ImpresaConfidi/page/index.jsp"></a></div>
 		<div id="other-nav-brand">
 			<ul class="nav navbar-nav navbar-centered">
-				<li><a href="/ImpresaConfidi/page/preventivo.jsp">Richiedi preventivo</a>
-				<li class="normal-device"><a href="#">Contatti</a>
+				<li id="preventivo"><a href="/ImpresaConfidi/page/preventivo.jsp">Richiedi preventivo</a>
+				<li id="contatti" class="normal-device"><a href="/ImpresaConfidi/page/contatti.jsp">Contatti</a>
 			</ul>
 		</div>
 		<div id="drop-down"></div>
@@ -31,7 +31,7 @@
 	<ul class="to-right">
 		<li><a href="/ImpresaConfidi/page/modulistica.jsp">Modulistica</a>
 		<li><a href="/ImpresaConfidi/page/convenzionate.jsp">Banche convenzionate</a>
-		<li><a href="#">Plafond e linee di credito</a>
-		<li class="realy-small-device"><a href="#">Contatti</a>
+		<li><a href="/ImpresaConfidi/page/plafond_linee_credito.jsp">Plafond e linee di credito</a>
+		<li class="realy-small-device"><a href="/ImpresaConfidi/page/contatti.jsp">Contatti</a>
 	</ul>
 </nav>
