@@ -20,10 +20,21 @@
 		<div class="navbar-header" ><a id="img-nav-header" href="/ImpresaConfidi/page/index.jsp"></a></div>
 		<div id="other-nav-brand">
 			<ul class="nav navbar-nav navbar-centered">
-				<li id="preventivo"><a href="/ImpresaConfidi/page/preventivo.jsp">Richiedi preventivo</a>
-				<li id="contatti" class="normal-device"><a href="/ImpresaConfidi/page/contatti.jsp">Contatti</a>
+				<li id="preventivo"><a
+					href="/ImpresaConfidi/page/preventivo.jsp">Richiedi preventivo</a>
+				<li id="contatti" class="normal-device"><a
+					href="/ImpresaConfidi/page/contatti.jsp">Contatti</a>
+				
 			</ul>
 		</div>
+		<div class="other-nav-brand">
+			<ul class="nav navbar-nav navbar-right scorre">
+				<li>
+					<marquee scrollamount="7">
+						NEWS: È ora possibile richiedere un prestito online. Visita la sezione prestiti! 
+					</marquee>
+			</ul>
+			</div>
 		<div id="drop-down"></div>
 	</div>
 </nav>
