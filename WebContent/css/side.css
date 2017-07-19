@@ -25,6 +25,7 @@ img.sidenav{
 }
 ul.sidenav{
 	list-style-type: none;
+	list-style-image: url("../resources/img/ul-dot.gif");
 }
 .sidenav li a{
 	padding-left:10px;
