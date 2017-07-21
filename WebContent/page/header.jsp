@@ -12,7 +12,7 @@
 		</div>
 		<div
 			class="navbar-header navbar-right navbar-brand navbar-brand-right"
-			id="frase">Qui qualche frase o uno slogan</div>
+			id="frase">Tasse e spese bancarie ridotte per le Piccole Medie Imprese</div>
 	</div>
 </nav>
 <nav class="navbar navbar-default" id="second-navbar">

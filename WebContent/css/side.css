@@ -1,11 +1,12 @@
 .side-element{
-	width: 30%;
+	width: 20%;
+	min-width: 217px;
 	height: auto;
 }
 
 .other-side-element{
-	margin-left: 30%;
-	width: 60%;
+	margin-left: 20%;
+	width: 75%;
 }
 
 div.sidenav{

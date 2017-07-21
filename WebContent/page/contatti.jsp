@@ -23,12 +23,12 @@
 			</div>
 			<div class="other-side-element" id="textSpace">
 				<h2>Contatti</h2>
-				<p>Roba da inserire</p>
-				<h2>Reti di confidi</h2>
-				<p>Altra roba da inserire<br>molta altra roba</p>
-				<h2>Altri titoli</h2>
-				<p>con relativi approfondimenti</p>
-				<br><br><br><br><br><br><br><br><br>Questo per farti capire come viene scorrendo la pagina<br><br><br><br><br><br>fine.<br>
+				<p style="font-size:18px;">Via cappuccini, 64<br>
+				80059 Torre del Greco<br>
+				Tel. 0813580367 - Fax. 0818470570<br>
+				E-mail impresaconfidi@gmail.com</p>
+				<p>orario uffici 09:00 - 13:00<br>
+				dal lunedì al venerdì</p>
 			</div>
 		</div>
 	</div>
