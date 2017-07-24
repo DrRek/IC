@@ -89,25 +89,65 @@ function validateDurata(){
 }
 
 function sendPRequest(){
-	if(checkField()){
-		var daInviare="L'email che verrà inviata conterrà queste informazioni:\n\n";
-		daInviare+="\nInformazioni dell'utente:";
-		daInviare+="\n\tNome: "+$("input[name=nome]").val().trim();
-		daInviare+="\n\tCognome: "+$("input[name=cognome]").val().trim();
-		daInviare+="\n\tEmail: "+$("input[name=email]").val().trim();
-		daInviare+="\n\tTelefono: "+$("input[name=telefono]").val().trim();
-		daInviare+="\n\tProvincia: "+$("select[name=provincia]").val().trim();
-		daInviare+="\n\tCittà: "+$("input[name=città]").val().trim();
-		daInviare+="\n\tVia: "+$("input[name=via]").val().trim();
-		daInviare+="\nInformazioni sul prestito:";
-		daInviare+="\n\tTipo: "+$("select[name=tipo]").val().trim()+" "+$("input[name=tipoAltro]").val().trim();
-		daInviare+="\n\tImporto: "+$("input[name=importo]").val().trim();
-		daInviare+="\n\tDurata: "+$("input[name=durata]").val().trim();
-		daInviare+="\n\tMotivazione: "+$("select[name=motivazione]").val().trim()+" "+$("input[name=motivazioneAltro]").val().trim();
-		daInviare+="\nUlteriori informazioni:";
-		daInviare+="\n\tMessaggio dall'utente:"+$("textarea[name=messaggio]").val().trim();
-		alert(daInviare);
-	}
+	/*if(checkField()){*/
+		
+		var nome = $("input[name=nome]").val().trim();
+		var cognome = $("input[name=cognome]").val().trim();
+		var email = $("input[name=email]").val().trim();
+		var telefono = $("input[name=telefono]").val().trim();
+		var provincia = $("select[name=provincia]").val().trim();
+		var città = $("input[name=città]").val().trim();
+		var via = $("input[name=via]").val().trim();
+		
+		var isStartup = true;
+		var ragione_sociale_società = $("select[name=ragSociale]").val().trim();
+		var conti_correnti_società = [];
+		if(!$("input[name=tipoAzienda]").is(":checked")){
+			isStartup = false;
+			$("input[name=banca]").each(function(index) {
+				if(this.value!=undefined && this.value!=null && this.value!= ""){
+					conti_correnti_società.push({banca:this.value, filiale:$("input[name=filiale]")[index].value});
+				}
+			});
+			console.log(conti_correnti_società)
+		}
+		
+		var tipo_prestito = $("select[name=tipo]").val().trim()+" "+$("input[name=tipoAltro]").val().trim();
+		var importo_prestito = $("input[name=importo]").val().trim();
+		var durata_prestito = $("input[name=durata]").val().trim();
+		var motivazione_prestito = $("select[name=motivazione]").val().trim()+" "+$("input[name=motivazioneAltro]").val().trim();
+		var messaggio = $("textarea[name=messaggio]").val().trim();
+		$.ajax({
+			type : "POST",
+			url : "mail",
+			data : {
+				action : 'mail-preventivo',
+				nome : nome,
+				cognome : cognome,
+				email : email,
+				telefono : telefono,
+				provincia : provincia,
+				città : città,
+				via : via,
+				isStartup : isStartup,
+				ragione_sociale_società : ragione_sociale_società,
+				conti_correnti_società : conti_correnti_società,
+				tipo_prestito : tipo_prestito,
+				importo_prestito : importo_prestito,
+				durata_prestito : durata_prestito,
+				motivazione_prestito : motivazione_prestito,
+				messaggio : messaggio
+			},
+			dataType : "json",
+			error : function(xhr, status, errorThrown) {
+				console.log(JSON.stringify(xhr));
+				console.log("AJAX error: " + status + ' : ' + errorThrown);
+			},
+			success : function(responseText) {
+				formatData(responseText);
+			}
+		})
+	//}
 }
 
 function checkField(){
