@@ -3,6 +3,5 @@
 <web-app>
   <display-name>IC</display-name>
   <welcome-file-list>
-    <welcome-file>page/index.jsp</welcome-file>
-  </welcome-file-list>
+    <welcome-file>page/index.jsp</welcome-file></welcome-file-list>
 </web-app>
