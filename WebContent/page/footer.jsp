@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!-- link href="/ImpresaConfidi/css/header.css" type="text/css" rel="stylesheet" />
-<script src="/ImpresaConfidi/script/header.js"></script-->
+<!-- link href="/css/header.css" type="text/css" rel="stylesheet" />
+<script src="/script/header.js"></script-->
 
 <div style="margin-top:40px;">
 	<hr style="margin-bottom:10px;">

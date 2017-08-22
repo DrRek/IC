@@ -7,11 +7,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Impresa Confidi</title>
 <link rel="icon" href="resources/img/logo.png">
-<link href="/ImpresaConfidi/css/bootstrap.css" type="text/css"
+<link href="/css/bootstrap.css" type="text/css"
 	rel="stylesheet" media="screen,projection" />
-<link href="/ImpresaConfidi/css/general.css" type="text/css"
+<link href="/css/general.css" type="text/css"
 	rel="stylesheet" />
-<link href="/ImpresaConfidi/css/convenzionate.css" type="text/css"
+<link href="/css/convenzionate.css" type="text/css"
 	rel="stylesheet" />
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
