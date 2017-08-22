@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<link href="/ImpresaConfidi/css/header.css" type="text/css" rel="stylesheet" />
+<link href="/css/header.css" type="text/css" rel="stylesheet" />
 <script src="/ImpresaConfidi/script/header.js"></script>
 
 <nav class="navbar navbar-default" id="first-navbar">
