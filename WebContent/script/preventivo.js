@@ -109,6 +109,7 @@ function sendPRequest(){
 					conti_correnti_società.push({banca:this.value, filiale:$("input[name=filiale]")[index].value});
 				}
 			});
+			console.log(conti_correnti_società)
 		}
 		
 		var tipo_prestito = $("select[name=tipo]").val().trim()+" "+$("input[name=tipoAltro]").val().trim();
@@ -118,7 +119,7 @@ function sendPRequest(){
 		var messaggio = $("textarea[name=messaggio]").val().trim();
 		$.ajax({
 			type : "POST",
-			url : "../mail",
+			url : "mail",
 			data : {
 				action : 'mail-preventivo',
 				nome : nome,
@@ -137,9 +138,13 @@ function sendPRequest(){
 				motivazione_prestito : motivazione_prestito,
 				messaggio : messaggio
 			},
+			dataType : "json",
 			error : function(xhr, status, errorThrown) {
 				console.log(JSON.stringify(xhr));
 				console.log("AJAX error: " + status + ' : ' + errorThrown);
+			},
+			success : function(responseText) {
+				formatData(responseText);
 			}
 		})
 	//}
